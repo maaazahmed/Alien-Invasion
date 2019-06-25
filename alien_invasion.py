@@ -1,34 +1,25 @@
-# import pygame
-# import sys
-
-# def run_game():
-#     pygame.init()
-#     screen = pygame.display.set_mode((800, 600))
-#     pygame.display.set_caption("git push -u origin master")
-#     screen.fill((230, 230, 230))
-#     while True:
-#         for event in pygame.event.get():
-#             if event == pygame.QUIT:
-#                 sys.exit()
-#         pygame.display.flip()
-
-# run_game()
-
-
 import pygame
 import sys
-
+from setting import Settings
+from ship import Ship
 
 def run_game():
     pygame.init()
-    screen = pygame.display.set_mode((600, 600))
-    pygame.display.set_caption("Alien Invasion")
-    screen.fill((230, 230, 230))
+    ai_settings = Settings()
+    screen = pygame.display.set_mode(
+        (ai_settings.screen_width, ai_settings.screen_height))
+    pygame.display.set_caption("Game")
+    print(screen.get_rect())
+    ship = Ship(screen)
+
+
     while True:
+        screen.fill(ai_settings.bg_color)  
+        ship.blitme()  
         for event in pygame.event.get():
             if event == pygame.QUIT:
                 sys.exit()
         pygame.display.flip()
 
-
 run_game()
+
