@@ -21,5 +21,5 @@ def run_game():
                 sys.exit()
         pygame.display.flip()
 
-run_game()
+# run_game()
 
