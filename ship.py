@@ -15,3 +15,22 @@
 #         self.screen.blit(self.image, self.rect)
 
 
+import pygame
+
+
+class Ship():
+    def __init__(self, screen):
+        self.screen =  screen
+        self.image =  pygame.image.load("images/ship.png")
+        
+        self.ract = self.image.get_rect()
+        self.screen_rect = screen.get_rect()
+        
+        self.ract.centerx =  self.screen_rect.centerx
+        self.ract.bottom = self.screen_rect.bottom
+
+    def blitme(self):
+        self.screen.blit(self.image, self.ract)
+            
+
+    
