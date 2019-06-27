@@ -14,16 +14,25 @@
 #         gf.check_events(ship)
 #         gf.update_screen(ai_settings, screen, ship)
 
+
 # run_game()
 
 
+import pygame
+import sys
 
 
+def run_gam():
+    pygame.init()
+    screen = pygame.display.set_mode((1200, 700))
+    pygame.display.set_caption("Alien Gmae")
 
-import 
+    while True:
+        for event in pygame.event.get():
+            if event == pygame.QUIT:
+                sys.exit()
+        pygame.display.flip()
+        screen.fill((230, 230, 230))
 
-# def run_gam():
-     
-                
 
-
+# run_gam()
