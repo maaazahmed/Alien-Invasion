@@ -36,6 +36,5 @@ def run_gam():
     while True:
         gf.check_events()
         gf.update_screen(ai_setting, screen, ship)
-
-
+        
 run_gam()
